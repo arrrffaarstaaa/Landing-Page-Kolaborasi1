@@ -3,389 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Materi Umum</title>
+<title>Bingkai Stik Es Krim</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
 body{
-    background:#f5fff1;
-    color:#222;
-    line-height:1.8;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fff8f0, #f3e7d9);
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
-
-header{
-    position:fixed;
-    top:20px;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    z-index:999;
-}
-
 .navbar{
-    width:90%;
-    background:rgba(255,255,255,0.9);
-    backdrop-filter:blur(10px);
-    padding:15px 30px;
-    border-radius:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.navbar-brand{
+  font-weight: 700;
+  color: #6b3f1d;
 }
 
-.logo img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
+.nav-link{
+  color: #6b3f1d;
+  font-weight: 500;
 }
 
-.logo h2{
-    color:#1e4721;
+.nav-link:hover{
+  color: #3d2410;
 }
 
-nav{
-    display:flex;
-    gap:20px;
+/* CARD */
+.section-card{
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-nav a{
-    text-decoration:none;
-    color:#1e4721;
-    font-weight:600;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#4caf50;
-}
-
-/* HERO */
-
-.hero{
-    height:70vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-    url('IMG/sampah5.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero-text h1{
-    font-size:50px;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    font-size:20px;
-}
-
-/* CONTENT */
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:80px 0;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    margin-bottom:35px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h2{
-    color:#1e4721;
-    margin-bottom:20px;
-}
-
-.card h3{
-    color:#2e7d32;
-    margin-top:20px;
-}
-
-.card p{
-    margin-top:10px;
-}
-
-.card ul,
-.card ol{
-    margin-left:25px;
-    margin-top:10px;
-}
-
-mark{
-    background:#c8f7c5;
-    padding:3px 8px;
-    border-radius:5px;
+/* IMAGE */
+.hero-img{
+  width: 100%;
+  border-radius: 15px;
 }
 
 /* FOOTER */
-
 footer{
-    background:#1e4721;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:50px;
+  background: #6b3f1d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.hero-text h1{
-    font-size:35px;
-}
-
-nav{
-    display:none;
-}
-
-.card{
-    padding:25px;
-}
-
+h3{
+  margin-top: 25px;
+  color: #6b3f1d;
 }
 
 </style>
 
 </head>
+
 <body>
 
 <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
 
-<header>
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-image"></i> Bingkai Stik Es Krim
+    </a>
 
-<div class="navbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="logo">
-<img src="IMG/logo.png">
-<h2>Querielif</h2>
-</div>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tujuan">Tujuan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#biaya">Biaya</a></li>
+        <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
+      </ul>
+    </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="#materi">Materi</a>
-<a href="#polusi">Polusi</a>
+  </div>
 </nav>
 
-</div>
+<br><br><br>
 
-</header>
+<div class="container py-4">
 
-<!-- HERO -->
+  <!-- GAMBAR -->
+  <div class="section-card text-center">
+    <img src="bingkai.jpg" class="hero-img" alt="">
+    <h3>MEMBUAT BINGKAI FOTO DARI STIK ES KRIM</h3>
+  </div>
 
-<section class="hero">
+  <!-- LATAR -->
+  <div class="section-card" id="latar">
+    <h3>LATAR BELAKANG</h3>
+    <p>pemanfaatan limbah stik eskrim yang melimpah menjadi produk bernilai ekonomi dan estetika.</p>
+  </div>
 
-<div class="hero-text">
-<h1>Materi Umum</h1>
-<p>Jadikan Sampah Barang Yang Mendunia</p>
-</div>
+  <!-- TUJUAN -->
+  <div class="section-card" id="tujuan">
+    <h3>TUJUAN</h3>
+    <p>Untuk memanfaatkan limbah stik eskrim menjadi benda bernilai guna dan estetis serta ramah lingkungan.</p>
+  </div>
 
-</section>
+  <!-- SIMBOLISME -->
+  <div class="section-card">
+    <h3>SIMBOLISME</h3>
+    <p>Daur ulang, kreativitas, kesabaran, dan nilai seni dari barang bekas.</p>
+  </div>
 
-<!-- CONTENT -->
+  <!-- EKSPRESI SENI -->
+  <div class="section-card">
+    <h3>EKSPRESI SENI</h3>
+    <p>Desain, warna, hiasan, dan kreativitas dalam menyusun stik es krim menjadi karya seni.</p>
+  </div>
 
-<div class="container">
+  <!-- ALAT -->
+  <div class="section-card">
+    <h3>ALAT DAN BAHAN</h3>
+    <p>Lem, stik es krim, cat, gunting, penggaris, hiasan, dll.</p>
+  </div>
 
-<!-- A -->
+  <!-- LANGKAH -->
+  <div class="section-card">
+    <h3>LANGKAH KERJA</h3>
+    <p>Menyiapkan → menyusun → merekatkan → mengeringkan → dekorasi → pasang foto</p>
+  </div>
 
-<div class="card" id="materi">
+  <!-- BIAYA -->
+  <div class="section-card" id="biaya">
+    <h3>ESTIMASI BIAYA</h3>
+    <p>Rp. 16.000</p>
+  </div>
 
-<h2><mark>A.</mark> Sampah</h2>
+  <!-- HARGA -->
+  <div class="section-card" id="harga">
+    <h3>HARGA JUAL</h3>
+    <p>Rp. 19.000</p>
+  </div>
 
-<p>
-Sampah atau limbah adalah sisa buangan dari aktivitas manusia dan proses alam
-yang berbentuk padat dan tidak terpakai lagi.
-</p>
-
-<p>
-Daur ulang memiliki dampak besar bagi lingkungan,
-ekonomi, dan kesehatan masyarakat.
-</p>
-
-<h3>Manfaat Daur Ulang Sampah</h3>
-
-<ul>
-<li>Mengurangi jumlah sampah</li>
-<li>Menghemat sumber daya alam</li>
-<li>Menghemat energi</li>
-<li>Mengurangi emisi gas rumah kaca</li>
-<li>Mengurangi polusi lingkungan</li>
-<li>Menciptakan peluang usaha</li>
-<li>Meningkatkan kesadaran lingkungan</li>
-</ul>
-
-</div>
-
-<!-- B -->
-
-<div class="card">
-
-<h2><mark>B.</mark> Prinsip 3R</h2>
-
-<p>
-Prinsip 3R terdiri dari:
-<b>Reduce, Reuse, dan Recycle.</b>
-</p>
-
-<h3>1. Reduce (Mengurangi)</h3>
-
-<p>
-Mengurangi jumlah sampah sejak awal.
-</p>
-
-<ul>
-<li>Membawa tas belanja sendiri</li>
-<li>Mengurangi plastik sekali pakai</li>
-<li>Membawa botol minum sendiri</li>
-</ul>
-
-<h3>2. Reuse (Menggunakan Kembali)</h3>
-
-<p>
-Menggunakan kembali barang yang masih layak pakai.
-</p>
-
-<ul>
-<li>Botol bekas jadi pot tanaman</li>
-<li>Baju bekas jadi kain lap</li>
-<li>Wadah bekas jadi tempat penyimpanan</li>
-</ul>
-
-<h3>3. Recycle (Daur Ulang)</h3>
-
-<p>
-Mengolah sampah menjadi produk baru yang bermanfaat.
-</p>
-
-<ul>
-<li>Membuat kompos</li>
-<li>Mendaur ulang plastik</li>
-<li>Mengolah limbah menjadi kerajinan</li>
-</ul>
-
-</div>
-
-<!-- C -->
-
-<div class="card" id="polusi">
-
-<h2><mark>C.</mark> Jenis Polusi</h2>
-
-<h3>Polusi Udara</h3>
-
-<p>
-Pencemaran udara akibat gas berbahaya dan asap kendaraan.
-</p>
-
-<ol>
-<li>Menggunakan transportasi umum</li>
-<li>Menanam pohon</li>
-<li>Mengurangi bahan bakar fosil</li>
-</ol>
-
-<h3>Polusi Air</h3>
-
-<p>
-Pencemaran air akibat limbah industri dan rumah tangga.
-</p>
-
-<ol>
-<li>Mengolah limbah sebelum dibuang</li>
-<li>Mengurangi pestisida</li>
-<li>Menjaga kebersihan sungai</li>
-</ol>
-
-<h3>Polusi Tanah</h3>
-
-<p>
-Pencemaran tanah akibat zat kimia dan sampah.
-</p>
-
-<ol>
-<li>Mengelola limbah dengan baik</li>
-<li>Mengurangi pupuk kimia</li>
-<li>Mengedukasi masyarakat</li>
-</ol>
-
-<h3>Polusi Suara</h3>
-
-<p>
-Kebisingan berlebihan yang mengganggu lingkungan.
-</p>
-
-<ol>
-<li>Mengurangi sumber kebisingan</li>
-<li>Menggunakan peredam suara</li>
-<li>Menjaga ketenangan lingkungan</li>
-</ol>
-
-<h3>Polusi Cahaya</h3>
-
-<p>
-Cahaya berlebihan yang mengganggu lingkungan malam.
-</p>
-
-<ol>
-<li>Menggunakan lampu hemat energi</li>
-<li>Mengurangi cahaya berlebihan</li>
-<li>Menggunakan lampu terarah</li>
-</ol>
-
-<br>
-
-<p align="center">
-<b>
-<mark>
-Mari menjaga lingkungan dengan menerapkan prinsip 3R
-dan mengurangi pencemaran lingkungan.
-</mark>
-</b>
-</p>
-
-</div>
+  <!-- KEUNTUNGAN -->
+  <div class="section-card">
+    <h3>KEUNTUNGAN</h3>
+    <p>Rp. 3.000</p>
+  </div>
 
 </div>
 
 <!-- FOOTER -->
-
 <footer>
-© 2025 Querielif | Peduli Lingkungan
+  <div class="container">
+    <h6>© 2026 Bingkai Stik Es Krim | X PPLG 3</h6>
+    <p class="mb-0">Kreativitas dari limbah menjadi karya seni ♻️</p>
+  </div>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
