@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonsai dari Limbah Kawat</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(to bottom, #eef9f0, #d7f2dc);
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar{
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 12px 0;
+    }
+
+    .navbar-brand{
+      font-weight: 700;
+      color: #226b3a;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-brand img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nav-link{
+      color: #226b3a !important;
+      font-weight: 600;
+      margin-left: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover{
+      color: #2e8b57 !important;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 60px;
+      padding: 140px 8% 80px;
+    }
+
+    .hero-text{
+      flex: 1 1 500px;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero-text h1{
+      font-size: 4rem;
+      font-weight: 700;
+      color: #226b3a;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-text p{
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .btn-custom{
+      padding: 12px 30px;
+      background: #2e8b57;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-custom:hover{
+      background: #226b3a;
+      transform: translateY(-5px);
+      color: white;
+    }
+
+    /* ================= IMAGE ================= */
+
+    .hero-image{
+      flex: 1 1 400px;
+      display: flex;
+      justify-content: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero-image img{
+      width: 350px;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    /* ================= SECTION ================= */
+
+    .section{
+      padding: 80px 8%;
+    }
+
+    .section-title{
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2{
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #226b3a;
+    }
+
+    /* ================= CARD ================= */
+
+    .info-card{
+      background: rgba(255,255,255,0.92);
+      border-radius: 25px;
+      padding: 35px;
+      margin-bottom: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: 0.4s;
+    }
+
+    .info-card:hover{
+      transform: translateY(-10px);
+    }
+
+    .info-card h3{
+      color: #226b3a;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .info-card p{
+      line-height: 1.9;
+      color: #444;
+    }
+
+    .info-card li{
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .icon{
+      font-size: 45px;
+      color: #2e8b57;
+      margin-bottom: 15px;
+    }
+
+    /* ================= PRICE BOX ================= */
+
+    .price-box{
+      background: linear-gradient(to right, #2e8b57, #57b87a);
+      color: white;
+      padding: 35px;
+      border-radius: 25px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .price-box h3{
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .price-box p{
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background: #226b3a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    @keyframes fadeUp{
+      from{
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:768px){
+
+      .hero{
+        text-align: center;
+      }
+
+      .hero-text h1{
+        font-size: 2.5rem;
+      }
+
+      .hero-image img{
+        width: 280px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <img src="IMG/logo.png" alt="">
+        Querielif
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#observasi">Observasi</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#alat">Alat & Bahan</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#harga">Harga</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <h1>MEMBUAT BONSAI DARI LIMBAH KAWAT</h1>
+
+      <p>
+        Pemanfaatan limbah kawat menjadi bonsai merupakan bentuk
+        kreativitas seni yang bernilai estetika, ramah lingkungan,
+        dan memiliki nilai ekonomi.
+      </p>
+
+      <a href="#observasi" class="btn-custom">
+        Pelajari Selengkapnya
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img src="IMG/bonsai.jpg" alt="Bonsai Kawat">
+
+    </div>
+
+  </section>
+
+  <!-- ================= CONTENT ================= -->
+
+  <section class="section" id="observasi">
+
+    <div class="section-title">
+      <h2>Isi Observasi</h2>
+    </div>
+
+    <!-- LATAR BELAKANG -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-lightbulb-fill"></i>
+      </div>
+
+      <h3>Latar Belakang</h3>
+
+      <p>
+        Penggunaan kawat dalam pembuatan bonsai bertujuan
+        untuk mengontrol dan membentuk pertumbuhan batang
+        serta cabang secara artistik sehingga menyerupai
+        miniatur pohon alami.
+      </p>
+
+    </div>
+
+    <!-- TUJUAN -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-bullseye"></i>
+      </div>
+
+      <h3>Tujuan</h3>
+
+      <p>
+        Membentuk batang, cabang, dan ranting agar sesuai
+        dengan desain yang diinginkan sehingga menghasilkan
+        tampilan bonsai yang lebih estetis dan alami.
+      </p>
+
+    </div>
+
+    <!-- SIMBOLISME -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-stars"></i>
+      </div>
+
+      <h3>Simbolisme</h3>
+
+      <p>
+        Seni bonsai melambangkan kesabaran, ketelatenan,
+        keseimbangan, dan keindahan alam.
+      </p>
+
+    </div>
+
+        <!-- EKSPRESI SENI -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-palette-fill"></i>
+      </div>
+
+      <h3>Ekspresi Seni</h3>
+
+      <p>
+        Pembuatan bonsai kawat merupakan proses artistik
+        yang memungkinkan seniman mengekspresikan kreativitasnya
+        melalui pembentukan pohon secara detail dan alami.
+      </p>
+
+    </div>
+
+    <!-- ALAT DAN BAHAN -->
+    <div class="info-card" id="alat">
+
+      <div class="icon">
+        <i class="bi bi-tools"></i>
+      </div>
+
+      <h3>Alat dan Bahan</h3>
+
+      <ol>
+        <li>Kawat aluminium</li>
+        <li>Pemotong kawat</li>
+        <li>Papan</li>
+        <li>Lem bakar</li>
+        <li>Sarung tangan</li>
+      </ol>
+
+    </div>
+
+    <!-- LANGKAH KERJA -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-list-check"></i>
+      </div>
+
+      <h3>Langkah Kerja</h3>
+
+      <ul>
+
+        <li>
+          Bentuk batang dan dahan utama menggunakan kawat.
+        </li>
+
+        <li>
+          Bentuk ranting-ranting kecil secara rapi dan merata.
+        </li>
+
+        <li>
+          Tata struktur pohon agar terlihat alami dan seimbang.
+        </li>
+
+        <li>
+          Bentuk akar kawat lalu tempelkan pada alas papan.
+        </li>
+
+        <li>
+          Lakukan penataan akhir hingga bonsai tampak indah.
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- ESTIMASI BIAYA -->
+    <div class="info-card" id="harga">
+
+      <div class="icon">
+        <i class="bi bi-cash-stack"></i>
+      </div>
+
+      <h3>Estimasi Biaya</h3>
+
+      <ol>
+
+        <li>Kawat bekas dari hanger : Rp.0</li>
+
+        <li>Tank (pemotong kawat) : Rp.0</li>
+
+        <li>Tambahan kawat kecil : Rp.18.000 (2 lingkar)</li>
+
+        <li>Papan : Rp.0</li>
+
+        <li>Lem bakar : Rp.3.000 (2 pcs)</li>
+
+      </ol>
+
+    </div>
+
+    <!-- PRICE BOX -->
+    <div class="price-box">
+
+      <h3>Rincian Harga</h3>
+
+      <p>💰 Uang yang Dikeluarkan : Rp.30.000</p>
+
+      <p>🏷️ Harga Jual : Rp.60.000</p>
+
+      <p>📈 Keuntungan : Rp.30.000</p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Bonsai dari Limbah Kawat | Kreativitas Daur Ulang
+    </p>
+
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

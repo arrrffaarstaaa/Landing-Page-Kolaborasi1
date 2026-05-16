@@ -1,0 +1,449 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Daur Ulang</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(to bottom, #eef9f0, #d7f2dc);
+      overflow-x:hidden;
+      color:#333;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar{
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 12px 0;
+    }
+
+    .navbar-brand{
+      font-weight:700;
+      color:#226b3a;
+      font-size:1.5rem;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .navbar-brand img{
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .nav-link{
+      color:#226b3a !important;
+      font-weight:600;
+      margin-left:15px;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#2e8b57 !important;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:60px;
+      padding:140px 8% 80px;
+    }
+
+    .hero-text{
+      flex:1 1 500px;
+      animation:fadeUp 1s ease;
+    }
+
+    .hero-text h1{
+      font-size:4rem;
+      font-weight:700;
+      color:#226b3a;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      line-height:1.9;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    .btn-custom{
+      padding:12px 30px;
+      background:#2e8b57;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn-custom:hover{
+      background:#226b3a;
+      transform:translateY(-5px);
+      color:white;
+    }
+
+    /* ================= IMAGE ================= */
+
+    .hero-image{
+      flex:1 1 400px;
+      display:flex;
+      justify-content:center;
+      animation:fadeIn 1.5s ease;
+    }
+
+    .hero-image img{
+      width:380px;
+      border-radius:25px;
+      box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    /* ================= SECTION ================= */
+
+    .section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      font-weight:700;
+      color:#226b3a;
+    }
+
+    /* ================= CARD ================= */
+
+    .info-card{
+      background:rgba(255,255,255,0.92);
+      border-radius:25px;
+      padding:35px;
+      margin-bottom:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.4s;
+    }
+
+    .info-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .info-card h3{
+      color:#226b3a;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .info-card h4{
+      color:#2e8b57;
+      margin-top:20px;
+      font-weight:600;
+    }
+
+    .info-card p{
+      line-height:1.9;
+      color:#444;
+    }
+
+    .info-card li{
+      margin-bottom:10px;
+      line-height:1.8;
+    }
+
+    .icon{
+      font-size:45px;
+      color:#2e8b57;
+      margin-bottom:15px;
+    }
+
+    mark{
+      background:#b8f5c9;
+      padding:2px 8px;
+      border-radius:5px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#226b3a;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:768px){
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:2.5rem;
+      }
+
+      .hero-image img{
+        width:280px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <img src="IMG/logo.png" alt="">
+        Querielif
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#materi">Materi</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#polusi">Polusi</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <h1>JADIKAN SAMPAH BARANG YANG MENDUNIA</h1>
+
+      <p>
+        Sampah dapat diolah menjadi produk bernilai guna dan estetika.
+        Dengan menerapkan prinsip daur ulang, kita dapat menjaga
+        lingkungan sekaligus menciptakan peluang ekonomi.
+      </p>
+
+      <a href="#materi" class="btn-custom">
+        Pelajari Selengkapnya
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img src="IMG/sampah5.jpg" alt="Sampah Daur Ulang">
+
+    </div>
+
+  </section>
+
+  <!-- ================= MATERI ================= -->
+
+  <section class="section" id="materi">
+
+    <div class="section-title">
+      <h2>Materi Daur Ulang</h2>
+    </div>
+
+    <!-- Sampah -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-recycle"></i>
+      </div>
+
+      <h3><mark>A.</mark> Sampah</h3>
+
+      <p>
+        Sampah atau limbah adalah sisa buangan dari aktivitas manusia
+        dan proses alam yang berbentuk padat dan tidak terpakai lagi.
+      </p>
+
+      <p>
+        Daur ulang memiliki manfaat besar bagi lingkungan,
+        kesehatan, dan ekonomi masyarakat.
+      </p>
+
+      <h4>Manfaat Daur Ulang :</h4>
+
+      <ol>
+        <li>Mengurangi jumlah sampah.</li>
+        <li>Menghemat sumber daya alam.</li>
+        <li>Menghemat energi.</li>
+        <li>Mengurangi emisi gas rumah kaca.</li>
+        <li>Mengurangi polusi lingkungan.</li>
+        <li>Menciptakan peluang bisnis.</li>
+        <li>Meningkatkan kesadaran lingkungan.</li>
+      </ol>
+
+    </div>
+
+    <!-- 3R -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-arrow-repeat"></i>
+      </div>
+
+      <h3><mark>B.</mark> Prinsip 3R</h3>
+
+      <p>
+        Prinsip 3R terdiri dari Reduce, Reuse, dan Recycle
+        untuk mengurangi dampak sampah terhadap lingkungan.
+      </p>
+
+      <h4>1. Reduce (Mengurangi)</h4>
+
+      <ul>
+        <li>Mengurangi penggunaan plastik sekali pakai.</li>
+        <li>Membawa botol minum sendiri.</li>
+        <li>Membeli produk isi ulang.</li>
+      </ul>
+
+      <h4>2. Reuse (Menggunakan Kembali)</h4>
+
+      <ul>
+        <li>Menggunakan botol bekas menjadi pot tanaman.</li>
+        <li>Menyumbangkan barang yang masih layak pakai.</li>
+        <li>Mengubah baju bekas menjadi kain lap.</li>
+      </ul>
+
+      <h4>3. Recycle (Mendaur Ulang)</h4>
+
+      <ul>
+        <li>Mengolah sampah organik menjadi kompos.</li>
+        <li>Memilah plastik dan kertas untuk didaur ulang.</li>
+      </ul>
+
+    </div>
+
+    <!-- Polusi -->
+    <div class="info-card" id="polusi">
+
+      <div class="icon">
+        <i class="bi bi-globe-asia-australia"></i>
+      </div>
+
+      <h3><mark>C.</mark> Jenis Polusi</h3>
+
+      <h4>1. Polusi Udara</h4>
+      <p>Pencemaran udara akibat gas berbahaya dan asap.</p>
+
+      <h4>2. Polusi Air</h4>
+      <p>Pencemaran air akibat limbah industri dan rumah tangga.</p>
+
+      <h4>3. Polusi Tanah</h4>
+      <p>Pencemaran tanah akibat limbah kimia dan sampah.</p>
+
+      <h4>4. Polusi Suara</h4>
+      <p>Pencemaran akibat kebisingan berlebihan.</p>
+
+      <h4>5. Polusi Cahaya</h4>
+      <p>Pencemaran akibat cahaya yang berlebihan.</p>
+
+      <hr>
+
+      <p class="text-center">
+        <b>
+          <mark>
+            Dengan memahami jenis-jenis polusi dan cara menanggulanginya,
+            kita dapat menjaga lingkungan dan meningkatkan kualitas hidup.
+          </mark>
+        </b>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+    <p>© 2026 Materi Daur Ulang | Querielif</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

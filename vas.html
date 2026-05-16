@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vas Gantung Tempurung Kelapa</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:linear-gradient(to bottom, #fff8f0, #f5e7d5);
+      overflow-x:hidden;
+      color:#333;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar{
+      background:rgba(255,255,255,0.85);
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      padding:12px 0;
+    }
+
+    .navbar-brand{
+      font-weight:700;
+      color:#6b3f1d;
+      font-size:1.5rem;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .navbar-brand img{
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .nav-link{
+      color:#6b3f1d !important;
+      font-weight:600;
+      margin-left:15px;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#8b5a2b !important;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:140px 8% 80px;
+      gap:50px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1 1 500px;
+      animation:fadeUp 1s ease;
+    }
+
+    .hero-text h1{
+      font-size:4rem;
+      font-weight:700;
+      color:#6b3f1d;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      line-height:1.9;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    .btn-custom{
+      padding:12px 28px;
+      background:#8b5a2b;
+      color:white;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn-custom:hover{
+      background:#6b3f1d;
+      transform:translateY(-5px);
+      color:white;
+    }
+
+    /* ================= IMAGE ================= */
+
+    .hero-image{
+      flex:1 1 400px;
+      display:flex;
+      justify-content:center;
+      animation:fadeIn 1.5s ease;
+    }
+
+    .image-box{
+      position:relative;
+    }
+
+    .main-img{
+      width:350px;
+      border-radius:25px;
+      box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .small-img{
+      width:180px;
+      border-radius:20px;
+      position:absolute;
+      bottom:-30px;
+      right:-40px;
+      border:5px solid white;
+      box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* ================= SECTION ================= */
+
+    .section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      color:#6b3f1d;
+      font-weight:700;
+      font-size:2.5rem;
+    }
+
+    /* ================= CARD ================= */
+
+    .info-card{
+      background:rgba(255,255,255,0.9);
+      border-radius:25px;
+      padding:35px;
+      margin-bottom:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.4s;
+    }
+
+    .info-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .info-card h3{
+      color:#6b3f1d;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .info-card p{
+      line-height:1.9;
+      color:#444;
+    }
+
+    .info-card li{
+      margin-bottom:10px;
+      line-height:1.8;
+    }
+
+    .icon{
+      font-size:45px;
+      color:#8b5a2b;
+      margin-bottom:15px;
+    }
+
+    /* ================= PRICE BOX ================= */
+
+    .price-box{
+      background:linear-gradient(to right, #8b5a2b, #b67a45);
+      color:white;
+      border-radius:25px;
+      padding:30px;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .price-box h3{
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    .price-box p{
+      font-size:1.3rem;
+      margin-bottom:10px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#6b3f1d;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:768px){
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:2.5rem;
+      }
+
+      .main-img{
+        width:280px;
+      }
+
+      .small-img{
+        width:130px;
+        right:-10px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <img src="IMG/logo.png" alt="">
+        Querielif
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#observasi">Observasi</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#alat">Alat & Bahan</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#harga">Harga</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <h1>VAS GANTUNG DARI TEMPURUNG KELAPA</h1>
+
+      <p>
+        Pemanfaatan limbah tempurung kelapa menjadi vas gantung
+        merupakan bentuk kreativitas yang ramah lingkungan,
+        estetis, dan bernilai ekonomi.
+      </p>
+
+      <a href="#observasi" class="btn-custom">
+        Pelajari Selengkapnya
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+
+      <div class="image-box">
+
+        <img src="IMG/vass1.jpg" class="main-img">
+
+        <img src="IMG/vass2.jpg" class="small-img">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= CONTENT ================= -->
+
+  <section class="section" id="observasi">
+
+    <div class="section-title">
+      <h2>Isi Observasi</h2>
+    </div>
+
+    <!-- 3R -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-recycle"></i>
+      </div>
+
+      <h3>Penerapan Prinsip 3R</h3>
+
+      <p>
+        Prinsip 3R (Reduce, Reuse, Recycle) diterapkan dalam proses
+        pembuatan vas gantung untuk mengurangi limbah dan menjaga lingkungan.
+      </p>
+
+      <ul>
+        <li><b>Reduce :</b> Mengurangi limbah dengan memanfaatkan tempurung kelapa bekas.</li>
+
+        <li><b>Reuse :</b> Menggunakan kembali limbah tempurung menjadi produk berguna.</li>
+
+        <li><b>Recycle :</b> Mendaur ulang sisa potongan tempurung menjadi bahan lain.</li>
+      </ul>
+
+    </div>
+
+    <!-- LATAR BELAKANG -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-lightbulb-fill"></i>
+      </div>
+
+      <h3>Latar Belakang</h3>
+
+      <p>
+        Tempurung kelapa yang melimpah sering kali hanya menjadi limbah.
+        Oleh karena itu, limbah tersebut dimanfaatkan menjadi produk
+        bernilai ekonomi dan estetika seperti vas gantung.
+      </p>
+
+    </div>
+
+    <!-- TUJUAN -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-bullseye"></i>
+      </div>
+
+      <h3>Tujuan</h3>
+
+      <p>
+        Untuk memanfaatkan limbah tempurung kelapa menjadi produk
+        bernilai guna, estetis, serta mendukung pelestarian lingkungan.
+      </p>
+
+    </div>
+
+    <!-- SIMBOLISME -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-stars"></i>
+      </div>
+
+      <h3>Simbolisme</h3>
+
+      <ul>
+        <li><b>Kekuatan :</b> Tempurung melambangkan kekuatan dan ketahanan.</li>
+
+        <li><b>Kesederhanaan :</b> Menggambarkan kealamian dan kesederhanaan.</li>
+
+        <li><b>Kreativitas :</b> Mengubah limbah menjadi karya seni bernilai.</li>
+
+        <li><b>Harmoni :</b> Menjaga keseimbangan manusia dan alam.</li>
+      </ul>
+
+    </div>
+
+    <!-- ALAT DAN BAHAN -->
+    <div class="info-card" id="alat">
+
+      <div class="icon">
+        <i class="bi bi-tools"></i>
+      </div>
+
+      <h3>Alat dan Bahan</h3>
+
+      <ol>
+        <li>Tempurung kelapa</li>
+        <li>Tali gantung</li>
+        <li>Cat</li>
+        <li>Kuas</li>
+        <li>Gunting</li>
+        <li>Bor kecil</li>
+        <li>Lem</li>
+      </ol>
+
+    </div>
+
+    <!-- LANGKAH -->
+    <div class="info-card">
+
+      <div class="icon">
+        <i class="bi bi-list-check"></i>
+      </div>
+
+      <h3>Langkah Kerja</h3>
+
+      <ul>
+        <li>Membersihkan tempurung kelapa.</li>
+
+        <li>Menghaluskan permukaan tempurung.</li>
+
+        <li>Membuat lubang untuk tali gantung.</li>
+
+        <li>Mengecat dan menghias tempurung.</li>
+
+        <li>Memasang tali dan tanaman hias.</li>
+      </ul>
+
+    </div>
+
+    <!-- HARGA -->
+    <div class="price-box" id="harga">
+
+      <h3>Estimasi Biaya & Keuntungan</h3>
+
+      <p>💰 Modal : Rp.25.000</p>
+
+      <p>🏷️ Harga Jual : Rp.45.000</p>
+
+      <p>📈 Keuntungan : Rp.20.000</p>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+    <p>© 2026 Vas Gantung Tempurung Kelapa | Kreativitas Daur Ulang</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

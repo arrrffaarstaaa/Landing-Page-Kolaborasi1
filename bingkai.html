@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi Umum</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5fff1;
+    color:#222;
+    line-height:1.8;
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    top:20px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    z-index:999;
+}
+
+.navbar{
+    width:90%;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    padding:15px 30px;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:#1e4721;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1e4721;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#4caf50;
+}
+
+/* HERO */
+
+.hero{
+    height:70vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('IMG/sampah5.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-text h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:20px;
+}
+
+/* CONTENT */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    margin-bottom:35px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#1e4721;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#2e7d32;
+    margin-top:20px;
+}
+
+.card p{
+    margin-top:10px;
+}
+
+.card ul,
+.card ol{
+    margin-left:25px;
+    margin-top:10px;
+}
+
+mark{
+    background:#c8f7c5;
+    padding:3px 8px;
+    border-radius:5px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1e4721;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:35px;
+}
+
+nav{
+    display:none;
+}
+
+.card{
+    padding:25px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+<img src="IMG/logo.png">
+<h2>Querielif</h2>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#materi">Materi</a>
+<a href="#polusi">Polusi</a>
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>Materi Umum</h1>
+<p>Jadikan Sampah Barang Yang Mendunia</p>
+</div>
+
+</section>
+
+<!-- CONTENT -->
+
+<div class="container">
+
+<!-- A -->
+
+<div class="card" id="materi">
+
+<h2><mark>A.</mark> Sampah</h2>
+
+<p>
+Sampah atau limbah adalah sisa buangan dari aktivitas manusia dan proses alam
+yang berbentuk padat dan tidak terpakai lagi.
+</p>
+
+<p>
+Daur ulang memiliki dampak besar bagi lingkungan,
+ekonomi, dan kesehatan masyarakat.
+</p>
+
+<h3>Manfaat Daur Ulang Sampah</h3>
+
+<ul>
+<li>Mengurangi jumlah sampah</li>
+<li>Menghemat sumber daya alam</li>
+<li>Menghemat energi</li>
+<li>Mengurangi emisi gas rumah kaca</li>
+<li>Mengurangi polusi lingkungan</li>
+<li>Menciptakan peluang usaha</li>
+<li>Meningkatkan kesadaran lingkungan</li>
+</ul>
+
+</div>
+
+<!-- B -->
+
+<div class="card">
+
+<h2><mark>B.</mark> Prinsip 3R</h2>
+
+<p>
+Prinsip 3R terdiri dari:
+<b>Reduce, Reuse, dan Recycle.</b>
+</p>
+
+<h3>1. Reduce (Mengurangi)</h3>
+
+<p>
+Mengurangi jumlah sampah sejak awal.
+</p>
+
+<ul>
+<li>Membawa tas belanja sendiri</li>
+<li>Mengurangi plastik sekali pakai</li>
+<li>Membawa botol minum sendiri</li>
+</ul>
+
+<h3>2. Reuse (Menggunakan Kembali)</h3>
+
+<p>
+Menggunakan kembali barang yang masih layak pakai.
+</p>
+
+<ul>
+<li>Botol bekas jadi pot tanaman</li>
+<li>Baju bekas jadi kain lap</li>
+<li>Wadah bekas jadi tempat penyimpanan</li>
+</ul>
+
+<h3>3. Recycle (Daur Ulang)</h3>
+
+<p>
+Mengolah sampah menjadi produk baru yang bermanfaat.
+</p>
+
+<ul>
+<li>Membuat kompos</li>
+<li>Mendaur ulang plastik</li>
+<li>Mengolah limbah menjadi kerajinan</li>
+</ul>
+
+</div>
+
+<!-- C -->
+
+<div class="card" id="polusi">
+
+<h2><mark>C.</mark> Jenis Polusi</h2>
+
+<h3>Polusi Udara</h3>
+
+<p>
+Pencemaran udara akibat gas berbahaya dan asap kendaraan.
+</p>
+
+<ol>
+<li>Menggunakan transportasi umum</li>
+<li>Menanam pohon</li>
+<li>Mengurangi bahan bakar fosil</li>
+</ol>
+
+<h3>Polusi Air</h3>
+
+<p>
+Pencemaran air akibat limbah industri dan rumah tangga.
+</p>
+
+<ol>
+<li>Mengolah limbah sebelum dibuang</li>
+<li>Mengurangi pestisida</li>
+<li>Menjaga kebersihan sungai</li>
+</ol>
+
+<h3>Polusi Tanah</h3>
+
+<p>
+Pencemaran tanah akibat zat kimia dan sampah.
+</p>
+
+<ol>
+<li>Mengelola limbah dengan baik</li>
+<li>Mengurangi pupuk kimia</li>
+<li>Mengedukasi masyarakat</li>
+</ol>
+
+<h3>Polusi Suara</h3>
+
+<p>
+Kebisingan berlebihan yang mengganggu lingkungan.
+</p>
+
+<ol>
+<li>Mengurangi sumber kebisingan</li>
+<li>Menggunakan peredam suara</li>
+<li>Menjaga ketenangan lingkungan</li>
+</ol>
+
+<h3>Polusi Cahaya</h3>
+
+<p>
+Cahaya berlebihan yang mengganggu lingkungan malam.
+</p>
+
+<ol>
+<li>Menggunakan lampu hemat energi</li>
+<li>Mengurangi cahaya berlebihan</li>
+<li>Menggunakan lampu terarah</li>
+</ol>
+
+<br>
+
+<p align="center">
+<b>
+<mark>
+Mari menjaga lingkungan dengan menerapkan prinsip 3R
+dan mengurangi pencemaran lingkungan.
+</mark>
+</b>
+</p>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+© 2025 Querielif | Peduli Lingkungan
+</footer>
+
+</body>
+</html>

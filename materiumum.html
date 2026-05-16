@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pencemaran Lingkungan</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      background: #edf7ec;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar{
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .navbar-brand{
+      font-weight: 700;
+      color: #1f4d1a;
+      font-size: 1.5rem;
+    }
+
+    .nav-link{
+      color: #1f4d1a !important;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover{
+      color: #4caf50 !important;
+    }
+
+    /* Hero */
+    .hero{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 8%;
+      gap: 50px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .hero-text{
+      flex: 1 1 500px;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero-text h1{
+      font-size: 4rem;
+      font-weight: 700;
+      color: #1f4d1a;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text span{
+      color: #4caf50;
+    }
+
+    .hero-text p{
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .btn-custom{
+      padding: 12px 30px;
+      background: #4caf50;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+      box-shadow: 0 10px 20px rgba(76,175,80,0.3);
+    }
+
+    .btn-custom:hover{
+      transform: translateY(-5px);
+      background: #2f8f3b;
+    }
+
+    /* Image */
+    .hero-image{
+      flex: 1 1 400px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .image-box{
+      position: relative;
+    }
+
+    .main-img{
+      width: 350px;
+      border-radius: 25px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      transition: 0.4s;
+    }
+
+    .main-img:hover{
+      transform: scale(1.03);
+    }
+
+    .small-img{
+      width: 180px;
+      border-radius: 20px;
+      position: absolute;
+      bottom: -30px;
+      right: -40px;
+      border: 6px solid white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Card */
+    .info-section{
+      padding: 80px 8%;
+    }
+
+    .info-card{
+      background: white;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: 0.4s;
+      height: 100%;
+    }
+
+    .info-card:hover{
+      transform: translateY(-10px);
+    }
+
+    .info-card i{
+      font-size: 2.5rem;
+      color: #4caf50;
+      margin-bottom: 20px;
+    }
+
+    .info-card h3{
+      color: #1f4d1a;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .info-card p{
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer{
+      background: #1f4d1a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+    /* Animation */
+    @keyframes fadeUp{
+      from{
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media(max-width: 768px){
+
+      .hero{
+        text-align: center;
+        padding-top: 120px;
+      }
+
+      .hero-text h1{
+        font-size: 2.7rem;
+      }
+
+      .main-img{
+        width: 280px;
+      }
+
+      .small-img{
+        width: 130px;
+        right: -10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Lingkungan</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#1">Tentang</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#1">Dampak</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#1">Solusi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>PENCEMARAN <span>LINGKUNGAN</span></h1>
+
+      <p>
+        Pencemaran lingkungan adalah perubahan besar pada kondisi lingkungan
+        akibat perkembangan ekonomi dan teknologi yang tidak terkendali.
+      </p>
+
+      <p>
+        Faktor penyebabnya antara lain peningkatan jumlah penduduk,
+        eksploitasi alam berlebihan, dan industrialisasi yang tidak
+        dikelola dengan baik.
+      </p>
+
+      <a href="#" class="btn-custom">
+        Pelajari Selengkapnya
+      </a>
+    </div>
+
+    <!-- Gambar -->
+    <div class="hero-image">
+      <div class="image-box">
+
+        <img src="IMG/sampah2.jpg" class="main-img" alt="">
+
+        <img src="IMG/sampah3.jpg" class="small-img" alt="">
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Info Card -->
+  <section class="info-section" id="1">
+
+    <div class="container">
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="info-card">
+
+            <i class="bi bi-trash3-fill"></i>
+
+            <h3>Penyebab</h3>
+
+            <p>
+              Pembuangan limbah sembarangan, asap kendaraan,
+              serta penggunaan bahan kimia berlebihan menjadi
+              penyebab utama pencemaran lingkungan.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+
+            <i class="bi bi-cloud-haze2-fill"></i>
+
+            <h3>Dampak</h3>
+
+            <p>
+              Pencemaran dapat menyebabkan kerusakan ekosistem,
+              gangguan kesehatan manusia, hingga perubahan iklim.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+
+            <i class="bi bi-globe-asia-australia-fill"></i>
+
+            <h3>Solusi</h3>
+
+            <p>
+              Menjaga kebersihan lingkungan, mengurangi plastik,
+              dan melakukan daur ulang dapat membantu mengurangi pencemaran.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Pencemaran Lingkungan | Dibuat Dengan ❤️</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
